@@ -54,7 +54,7 @@ Remote Repository (GitHub)
 Latest Changes from Remote Repository
 ------------------------------------------------------------
 
-Interview Answer (30 seconds)
+Interview Answer 
 
 The Git workflow starts by initializing or cloning a repository. After making code changes, we use git status to check the changes, 
 git add to stage them, and git commit to save them in the local repository. 
