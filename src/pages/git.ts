@@ -29,4 +29,35 @@ In other words, it tells Git which changes you want to include in the next commi
 git add . → Stage all changes.
 git add <file-name> → Stage only a specific file.
 git add -A → Stage everything, including deleted files.
+
+------------------------------------------------------------
+Git Workflow Diagram
+
+Working Directory
+        │
+        │  git add
+        ▼
+Staging Area
+        │
+        │  git commit
+        ▼
+Local Repository
+        │
+        │  git push
+        ▼
+Remote Repository (GitHub)
+
+        ▲
+        │
+        │  git pull
+        │
+Latest Changes from Remote Repository
+------------------------------------------------------------
+
+Interview Answer (30 seconds)
+
+The Git workflow starts by initializing or cloning a repository. After making code changes, we use git status to check the changes, 
+git add to stage them, and git commit to save them in the local repository. 
+If it's the first push, we connect the local repository to GitHub using git remote add origin. Finally, we use git push to upload 
+commits to the remote repository and git pull to fetch the latest changes from the remote repository.
 */ 
