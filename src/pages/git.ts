@@ -60,4 +60,10 @@ The Git workflow starts by initializing or cloning a repository. After making co
 git add to stage them, and git commit to save them in the local repository. 
 If it's the first push, we connect the local repository to GitHub using git remote add origin. Finally, we use git push to upload 
 commits to the remote repository and git pull to fetch the latest changes from the remote repository.
+
+1).env.example file create
+2.create folder .github/workflows=> playwright.yml file
+
 */ 
+
+//assignment 4 repo url for js ts pw core and pw framework
