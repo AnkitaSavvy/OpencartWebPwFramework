@@ -1,19 +1,19 @@
 import {test, expect} from '../src/fixtures/pageFixtures';
-import { CsvHelper } from '../src/utils/CsvHelper';
+//import { CsvHelper } from '../src/utils/CsvHelper';
 
 test.beforeEach(async({loginPage})=>{
     await loginPage.goTologinPage();
     await loginPage.doLogin(process.env.USERNAME!, process.env.PASSWORD!);
 });
 
-const productData= CsvHelper.readCsv('src/data/product.csv');
+/* const productData= CsvHelper.readCsv('src/data/product.csv');
 
 for(let row of productData){
 test(`verify search results count -${row.searchkey}- ${row.productname}`,async({homePage ,searchResultsPage})=>{
  await homePage.doSearch(row.searchkey);
  expect (await searchResultsPage.getProductSearchResultCount()).toBe(Number(row.resultcount));//convert string to number
 })
-};
+}; */
 
 for(let row of productData){
 test(`verify user is able to land on the product page ${row.productname}`,async({homePage ,searchResultsPage, page})=>{

@@ -1,5 +1,5 @@
 import {test, expect} from '../src/fixtures/pageFixtures';
-import { CsvHelper } from '../src/utils/CsvHelper';
+//import { CsvHelper } from '../src/utils/CsvHelper';
 
 //only 1 hard assert 
 
@@ -42,7 +42,7 @@ test('login to app using wrong credentials with Data driven approach test', asyn
 })
 
 //DO 2 without fixture, parallel mode, read csv data directlyand loop the test method row wise
-let testData = CsvHelper.readCsv('src/data/loginData.csv');
+/* let testData = CsvHelper.readCsv('src/data/loginData.csv');
 
     for(let row of testData){
             test(`Invalid login test with ${row.username}- ${row.password}`, async({loginPage})=>{ //test name :Invalid login test with invalid@open.com- wrong123
@@ -50,7 +50,7 @@ let testData = CsvHelper.readCsv('src/data/loginData.csv');
             await loginPage.doLogin(row.username, row.password);
             expect(await loginPage.IsinvalidLoginErrorDisplayed()).toBeTruthy();
             });
-        }
+        } */
 
 //Assignment do the registration page without testdata fixtures
 

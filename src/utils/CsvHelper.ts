@@ -1,4 +1,4 @@
-//1 time helper file we have to write no need to memorize for interview
+/* //1 time helper file we have to write no need to memorize for interview
 
 import fs from "fs";
 import {parse} from 'csv-parse/sync';
@@ -16,4 +16,5 @@ export class CsvHelper{
         }) as Record<string,string>[];//alias for record (maintaining data as a record)like map collection of java
     }
 }
-  
+
+ */
