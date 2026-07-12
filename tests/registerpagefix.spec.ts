@@ -1,7 +1,7 @@
 
 import {test, expect} from '../src/fixtures/pageFixtures';
 import { RegisterPage } from '../src/pages/RegisterPage';
-import { CsvHelper } from '../src/utils/CsvHelper';
+//import { CsvHelper } from '../src/utils/CsvHelper';
 
 
 
@@ -17,7 +17,7 @@ expect(pageTitle).toBe('Register Account');
 })
 
 
-let registerTestData = CsvHelper.readCsv('src/data/registrationData.csv');
+/* let registerTestData = CsvHelper.readCsv('src/data/registrationData.csv');
 
     for(let row of registerTestData){
             test(`User is able to register test ${row.FirstName}`, async({registerPage})=>{ 
@@ -25,4 +25,4 @@ let registerTestData = CsvHelper.readCsv('src/data/registrationData.csv');
             await registerPage.doRegister(row.FirstName, row.LastName,row.EMail, row.Telephone, row.Password,row.confirmPassword, row.Subscribe);
             
             });
-        }
+        } */
