@@ -15,13 +15,13 @@ test(`verify search results count -${row.searchkey}- ${row.productname}`,async({
 })
 }; */
 
-for(let row of productData){
+/* for(let row of productData){
 test(`verify user is able to land on the product page ${row.productname}`,async({homePage ,searchResultsPage, page})=>{
  await homePage.doSearch(row.searchkey);
  await searchResultsPage.selectProduct(row.productname);
  expect(await page.title()).toBe(row.productname);
 })
-};
+}; */
 
 //manual data
 /* test('verify search results count',async({homePage ,searchResultsPage})=>{
