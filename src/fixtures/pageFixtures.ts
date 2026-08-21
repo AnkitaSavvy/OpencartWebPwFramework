@@ -6,22 +6,33 @@ import { LoginPage } from '../pages/LoginPage';
 import { HomePage } from '../pages/HomePage';
 import {RegisterPage} from '../pages/RegisterPage';
 import { readFile } from 'fs';
-import { CsvHelper } from '../utils/CsvHelper';
+//import { CsvHelper } from '../utils/CsvHelper';
 import { SearchResultsPage } from '../pages/SearchResultsPage';
+import { ProductInfoPage } from '../pages/ProductInfoPage';
+import { BasePage } from '../pages/BasePage';
 
 // pagefixtures is custom type like string type or number , student 
 //Ab hum apne fixtures create karna chahte hain: Isliye custom test bana rahe hain.
 type pageFixtures={        //MyFixtures name could be anything
+    basePage:BasePage,
     loginPage: LoginPage,  //Mere custom fixtures me 2 objects honge:Aur unka type hoga:LoginPage class ,HomePage class
     homePage:HomePage,
     registerPage:RegisterPage,
     searchResultsPage:SearchResultsPage,
+    productInfoPage:ProductInfoPage,
     testData:Record<string,string>[]
 };
 
 
 //Existing test me mere custom fixtures add karo.
 export let test= baseTest.extend<pageFixtures>({    //MyFixtures //Playwright ke test object ke andar ek method hoti hai:test.extend() like page.click()
+        
+        basePage: async({page}, use)=>{ 
+        let basePage =new BasePage(page); 
+        await use(basePage);
+        },
+      
+    
         loginPage: async({page}, use)=>{
         let loginPage =new LoginPage(page);
         await use(loginPage);
@@ -41,7 +52,13 @@ export let test= baseTest.extend<pageFixtures>({    //MyFixtures //Playwright ke
         
         searchResultsPage: async({page}, use)=>{  //instead of use name could be anything like provideFixture  
         let searchResultsPage = new SearchResultsPage(page);
-        await use(searchResultsPage);//here use is fnc used to provide the created registerPage fixture object to the test. Without use(), the fixture will not be available inside the test.
+        await use(searchResultsPage);//here use is fnc used to provide the created searchPage fixture object to the test. Without use(), the fixture will not be available inside the test.
+    
+        },
+
+        productInfoPage: async({page}, use)=>{  //instead of use name could be anything like provideFixture  
+        let productInfoPage = new ProductInfoPage(page);
+        await use(productInfoPage);//here use is fnc used to provide the created productPage fixture object to the test. Without use(), the fixture will not be available inside the test.
     
         },
 

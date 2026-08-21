@@ -7,7 +7,7 @@ test.beforeEach(async({loginPage})=>{
 });
 
 test('homepage title test', async({homePage})=>{ 
-const pageTitle= await homePage.getHomePageTitle();
+const pageTitle= await homePage.getPageTitle(); //extended from the baseclass bcz commom method for all the pages
 console.log('home page title:',pageTitle); //home page title: My Account
 expect(pageTitle).toBe('My Account');
 })

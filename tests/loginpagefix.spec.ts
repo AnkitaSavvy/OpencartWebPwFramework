@@ -23,7 +23,7 @@ test('user is able to login to app test', async({loginPage,homePage})=>{
 //await loginPage.doLogin('pwtestbatch@open.com' , 'pw1234');
 await loginPage.doLogin(process.env.USERNAME!,process.env.PASSWORD!);//! null check if the username or password not available
 expect.soft(await homePage.islogoutLinkExist()).toBeTruthy();
-expect.soft(await homePage.getHomePageTitle()).toBe('My Account');
+expect.soft(await homePage.getPageTitle()).toBe('My Account');
 
 })
 
