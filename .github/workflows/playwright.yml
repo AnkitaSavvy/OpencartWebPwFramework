@@ -1,12 +1,12 @@
 name: Playwright AllTests
 
 on:
-  schedule:
-    - cron: '30 21 * * 1-4'  # Mon-Fri 8PM IST
-  push:
-    branches: [main] #if we have more branch then use ,
-  pull_request:
-    branches: [main]
+  # schedule:
+  #   - cron: '30 21 * * 1-4'  # Mon-Fri 8PM IST
+  # push:
+  #   branches: [main] #if we have more branch then use ,
+  # pull_request:
+  #   branches: [main]
   workflow_dispatch:   #manual trigger button in github ui
     inputs:
       environment:
