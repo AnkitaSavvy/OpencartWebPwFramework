@@ -33,13 +33,14 @@ expect.soft(await homePage.getPageTitle()).toBe('My Account');
 //what if we have 10+ rows data we should run in parallel to save time
 //lengthy report but we want seperate test method 
 //1 browser with multiple user cred. then it will crash
-test.skip('login to app using wrong credentials with Data driven approach test', async({loginPage,testData})=>{
+
+/* test('login to app using wrong credentials with Data driven approach test', async({loginPage,testData})=>{
   for(let row of testData){
    await loginPage.doLogin(row.username, row.password);
    expect(await loginPage.IsinvalidLoginErrorDisplayed()).toBeTruthy();
   }
 
-})
+}) */
 
 //DO 2 without fixture, parallel mode, read csv data directlyand loop the test method row wise
 /* let testData = CsvHelper.readCsv('src/data/loginData.csv');
