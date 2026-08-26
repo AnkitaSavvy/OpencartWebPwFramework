@@ -15,7 +15,7 @@ test.beforeEach(async({page})=>{
 });
 
 test('homepage title test', async()=>{ //no need destructuring bcz already did in beforeeach ()
-const pageTitle= await homePage.getHomePageTitle();
+const pageTitle= await homePage.getPageTitle();
 console.log('home page title:',pageTitle); //home page title: My Account
 expect(pageTitle).toBe('My Account');
 })

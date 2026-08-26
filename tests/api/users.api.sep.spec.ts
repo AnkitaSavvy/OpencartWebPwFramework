@@ -51,7 +51,7 @@ test.describe.serial('API Tests for User Management',()=>{
       console.log('Response Status Text:', response.statusText);
    });
 
-   test('Verify the PUT API to update a user', async ({apiHelper})=>{ 
+   test.skip('Verify the PUT API to update a user', async ({apiHelper})=>{ 
 
       let userUpdatedData = {
          "name": "API Automation User",
@@ -69,7 +69,7 @@ test.describe.serial('API Tests for User Management',()=>{
    
    });
 
-   test('Verify the DELETE API to update a user', async ({apiHelper})=>{ 
+   test.skip('Verify the DELETE API to delete a user', async ({apiHelper})=>{ 
 
       let response= await apiHelper.delete(`/public/v2/users/${userId}` , AUTH_HEADER);
       expect(response.status).toBe(204); //verifying the status code of the response

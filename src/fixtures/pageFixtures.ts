@@ -62,10 +62,10 @@ export let test= baseTest.extend<pageFixtures>({    //MyFixtures //Playwright ke
     
         },
 
-        testData: async({},use)=>{
+        /* testData: async({},use)=>{
         let testData = CsvHelper.readCsv('src/data/loginData.csv');//imported CsvHelper class 
         await use(testData);
-        }
+        } */
 })
 
 
