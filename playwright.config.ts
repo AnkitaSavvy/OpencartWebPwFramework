@@ -15,7 +15,7 @@ export default defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? '50%' : undefined,
+  workers: process.env.CI ? '50%' : undefined, //50% of cpu of ubuntu machine or worker no. 1,2,3 we can mention
   reporter: [
     ["list"],
     ["html", { outputFolder: "reports/html-report", open: "never" }],
