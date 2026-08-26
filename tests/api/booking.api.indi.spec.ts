@@ -76,7 +76,7 @@ test('PUT - Update a user test', async ({ bookingApiHelper }) => {
   const userResponse = await createUser(bookingApiHelper);
 
   const userUpdatedData = {
-    firstname: 'Jima',
+    firstname: 'Jimaa',
     lastname: 'Brown',
     totalprice: 111,
     depositpaid: true,
