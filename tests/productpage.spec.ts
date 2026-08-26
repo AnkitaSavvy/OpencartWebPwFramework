@@ -25,7 +25,7 @@ test('verify footer exists on the productPage',async({basePage})=>{ //basePage f
  let imageCount=  await productInfoPage.getProductImagesCount();
  console.log('Total Images Count:' + imageCount);
  expect(imageCount).toBe(4);//actual vs expected(4) we can hardcode expected value only bcz in csv file also hardcoded 
-
+ });
 
 //single test with multiple assertions: thats why we are using soft assertions here. 
 // If one assertion fails, the other assertions will still be executed.
@@ -44,14 +44,6 @@ test('verify product Information/Data',async({homePage ,searchResultsPage, produ
     expect.soft (actualproductInfoMap.get('ExTaxPrice')).toBe('$2,000.00');
 
 });
-
-
-
-
-
-
-
-
 /* Assignment: create a test case to verify the product information/data with csv data provider 
 and data driven approach. search key ,product name ,and what actually u want to verify like product header, images count, brand, product code, reward points, 
 availability, product price, ex tax price etc.
