@@ -47,6 +47,7 @@ test('create user test', async({request}) => {
     expect(response.statusText()).toBe('Created');
 })
 
+//it will fail bcz of not existing userid
 test('update user test', async({request}) => {
     //js object
     let userData = {
@@ -60,7 +61,7 @@ test('update user test', async({request}) => {
     
     //js object to json object conversion :serialization
     //It is done automatically by playwright api request method. we don't need to convert it manually. we can directly pass the js object in the data parameter .  
-    let response= await request.put('https://gorest.co.in/public/v2/users/8577747',{
+    let response= await request.put('https://gorest.co.in/public/v2/users/8593724',{
         headers:AUTH_TOKEN,
         data: userData
     });
@@ -73,10 +74,10 @@ test('update user test', async({request}) => {
     expect(response.statusText()).toBe('OK');
 })
 
-
+//it will fail bcz of not existing userid
 test('delete user test', async({request}) => {
     
-    let response= await request.delete('https://gorest.co.in/public/v2/users/8577744',{
+    let response= await request.delete('https://gorest.co.in/public/v2/users/8593724',{
         headers:AUTH_TOKEN
     });
 
